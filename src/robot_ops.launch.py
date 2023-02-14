@@ -23,7 +23,7 @@ def generate_launch_description():
 		package='topic_tools',
 		executable='relay',
 		output='screen',
-		arguments=['/carter1/cmd_vel', '/cmd_vel']
+		arguments=[f'/carter{robot_num}/cmd_vel', '/cmd_vel']
 	)
 	
 	relay_odom_node = Node(
