@@ -32,9 +32,6 @@ class ROS_Dock_Client(Node):
         """Send ActionServer a new goal"""
 
         goal_msg = Undock.Goal()
-            
-        print(goal_msg)
-
         # Send goal to ActionServer
         self._undock_action_client.wait_for_server()
         # self._send_goal_future = self._undock_action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback)
@@ -72,8 +69,6 @@ class ROS_Dock_Client(Node):
         """Send ActionServer a new goal"""
 
         goal_msg = DockServo.Goal()
-            
-        print(goal_msg)
 
         # Send goal to ActionServer
         self._dock_action_client.wait_for_server()
