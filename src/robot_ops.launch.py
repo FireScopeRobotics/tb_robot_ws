@@ -65,6 +65,13 @@ def generate_launch_description():
 	    output='screen',
       arguments=['/tb_dock_commands_result', f'/carter{robot_num}/tb_dock_commands_result']
 	)
+
+	relay_sensor_node = Node(
+	    package='topic_tools',
+	    executable='relay',
+	    output='screen',
+      arguments=['/sensor_topic', f'/carter{robot_num}/sensor_topic']
+	)
 	
 	# tb_dock_commands_result
 	return LaunchDescription([
@@ -75,4 +82,5 @@ def generate_launch_description():
 		tb_dock_handler_node,
 		relay_tb_dock_command_node,
 		relay_tb_dock_command_result_node,
+		relay_sensor_node,
 	])
