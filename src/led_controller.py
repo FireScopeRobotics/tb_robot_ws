@@ -13,22 +13,6 @@ pin = board.D12
 
 pixels = neopixel.NeoPixel(pin, num_pixels, brightness=1,auto_write=False)
 
-# def main():
-#     while True:
-#         time.sleep(2)
-
-#         pixels.fill((255, 255, 255))
-#         pixels.show()
-#         time.sleep(2)
-
-# if __name__ == '__main__':
-#     try:
-#         main()
-#     except KeyboardInterrupt:
-#         pixels.fill((0, 0, 0))
-#         pixels.show()
-#         sys.exit(0)
-
 
 class VelSub(Node):
 
